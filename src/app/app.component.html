@@ -4,4 +4,14 @@
   <hr />
 
   <app-auth />
+
+<!-- ***Newer Angular versions only*** -->
+  @if (isAdmin()) {
+  <p> Only admins should see this!</p>
+  }
+
+  <!-- ***Older Versions*** -->
+    <!-- In app.componnts.ts you would have to import ngIf from
+    angular/common and add it to imports as ngIf -->
+  <!-- <p *ngIf="isAdmin()"> Only admins should see this!</p> -->
 </main>
